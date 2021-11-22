@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">modevt finals</string>
+
+    <string name="how_to_play">HOW TO PLAY \n\n 1. At the start of the game, the player is given 3 tokens of life. These tokens are the lives given to you to answer the 5 questions. \n
+    2. if you get a question right you will be given another token of life. If you get the answer wrong 1 life will be deducted. \n\n
+    3. If you get through the 5 questions without running out of life tokens you win. If you lose all your life tokens before completing all 5 questions you lose the game.
+    </string>
+    <string name="about_us">ABOUT US \n \n We, students of De La Salle - College of Saint Benilde under the Information Systems program are the
+key figures in developing this mobile quiz application, on which we benefit and thank the entire
+Benildean community in participating in this simple quiz application in order to cherish the prosperous and
+rich history of our institution and also the teachings of Saints John Baptist De La Salle and Benilde Romancon.</string>
 </resources>
