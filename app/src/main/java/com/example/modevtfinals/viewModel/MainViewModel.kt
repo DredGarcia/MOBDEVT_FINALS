@@ -23,5 +23,10 @@ class MainViewModel: ViewModel() {
         _load.value = 3
     }
 
+    fun wrongAnswer(){
+        _data.value = _data.value?.minus(1)
+
+    }
+
 
 }

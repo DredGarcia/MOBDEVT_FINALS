@@ -19,13 +19,14 @@ class GameQuestion1 : AppCompatActivity() {
         binding = ActivityGameQuestion1Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val viewModel by viewModels<MainViewModel>()
-        viewModel.message.observe(this)
+        viewModel.data.observe(this)
         {
-            binding.textViewToken.text = it
+            binding.textViewToken.text = "Token $it"
         }
 
 
         binding.buttonQ1A.setOnClickListener() {
+            viewModel.wrongAnswer()
             val intent = Intent(this, GameQuestion2::class.java)
             startActivity(intent)
         }
