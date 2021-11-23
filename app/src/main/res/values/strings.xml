@@ -10,6 +10,8 @@ key figures in developing this mobile quiz application, on which we benefit and 
 Benildean community in participating in this simple quiz application in order to cherish the prosperous and
 rich history of our institution and also the teachings of Saints John Baptist De La Salle and Benilde Romancon.</string>
 
+    <string name="cert_csb">How Certified Benildean Are You?</string>
+
     <string name="question_1">1. What year did De La Salle - College of Saint Benilde was founded?</string>
     <string name="Q1choiceA">A. 1975</string>
     <string name="Q1choiceB">B. 1978</string>

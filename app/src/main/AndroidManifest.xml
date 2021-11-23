@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ModevtFinals">
         <activity
+            android:name=".GameQuestion3"
+            android:exported="false" />
+        <activity
             android:name=".GameQuestion2"
             android:exported="false" />
         <activity
