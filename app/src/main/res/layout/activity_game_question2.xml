@@ -29,14 +29,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/buttonA4"
+        android:id="@+id/buttonQ2C"
         style="@style/choiceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Q2choiceC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonQ2C" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonQ2B" />
 
     <Button
         android:id="@+id/buttonQ2D"
@@ -46,10 +46,10 @@
         android:text="@string/Q2choiceD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonA4" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonQ2C" />
 
     <Button
-        android:id="@+id/buttonQ2C"
+        android:id="@+id/buttonQ2B"
         style="@style/choiceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
