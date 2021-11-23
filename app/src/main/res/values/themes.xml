@@ -22,4 +22,12 @@
         <item name="cornerRadius">20dp</item>
         <item name="fontFamily">@font/supercell_magic_webfont</item>
     </style>
+
+    <style name="choiceButton">
+        <item name="backgroundTint">@color/primary_dark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary_light</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="fontFamily">@font/supercell_magic_webfont</item>
+    </style>
 </resources>

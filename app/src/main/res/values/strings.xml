@@ -9,5 +9,36 @@
 key figures in developing this mobile quiz application, on which we benefit and thank the entire
 Benildean community in participating in this simple quiz application in order to cherish the prosperous and
 rich history of our institution and also the teachings of Saints John Baptist De La Salle and Benilde Romancon.</string>
-    <string name="cert_csb">How Certified Benildean Are You?</string>
+
+    <string name="question_1">1. What year did De La Salle - College of Saint Benilde was founded?</string>
+    <string name="Q1choiceA">A. 1975</string>
+    <string name="Q1choiceB">B. 1978</string>
+    <string name="Q1choiceC">C. 1980</string>
+    <string name="Q1choiceD">D. 1982</string>
+
+    <string name="question_2">2. Who is the current President of De La Salle College of Saint Benilde</string>
+    <string name="Q2choiceA">A. Br. Andrew Gonzalez</string>
+    <string name="Q2choiceB">B. Br. Armin Luistro</string>
+    <string name="Q2choiceC">C. Br. Dennis Magbanua</string>
+    <string name="Q2choiceD">D. Bro. Edmundo Fernandez</string>
+
+    <string name="question_3">3. There are three main campuses in CSB, which is a 14 storey academic building and a big playground for creative minds that stimulates students innovative ideas and to think outside of the box.</string>
+    <string name="Q3choiceA">A. Taft </string>
+    <string name="Q3choiceB">B. SDA</string>
+    <string name="Q3choiceC">C. AKIC</string>
+    <string name="Q3choiceD">D. ATRIUM</string>
+
+    <string name="question_4">Which of the following is not a benildean core value?</string>
+    <string name="Q4choiceA">A. Perseverance and Forthright </string>
+    <string name="Q4choiceB">B. professional competence</string>
+    <string name="Q4choiceC">C. appreciation of individual worth</string>
+    <string name="Q4choiceD">D. Sense of Nationhood</string>
+
+    <string name="question_5">Fill in the blank in our  with the correct word among the choices below: \n\n
+    "De La Salle-College of Saint Benilde, a member of De La Salle Philippines, is a Catholic, dynamic, and innovative learning community. Guided by the Lasallian principles of _ _ _ _ _, Zeal in Service and Communion in Mission, it recognizes the uniqueness of every individual and responds to the diverse needs of all learners."</string>
+    <string name="Q5choiceA">A. Faith</string>
+    <string name="Q5choiceB">B. Duty</string>
+    <string name="Q5choiceC">C. Optimism</string>
+    <string name="Q5choiceD">D. Love</string>
+
 </resources>
