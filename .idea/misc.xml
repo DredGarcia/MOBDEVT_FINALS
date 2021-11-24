@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/DreD/AndroidStudioProjects/modevtfinals/app/src/main/res/layout/activity_game_about.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/DreD/AndroidStudioProjects/modevtfinals/app/src/main/res/layout/activity_game_how_to_play.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/DreD/AndroidStudioProjects/modevtfinals/app/src/main/res/layout/activity_game_question1.xml" value="0.33" />
-        <entry key="..\:/Users/DreD/AndroidStudioProjects/modevtfinals/app/src/main/res/layout/activity_game_question2.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/DreD/AndroidStudioProjects/modevtfinals/app/src/main/res/layout/activity_game_question3.xml" value="0.16111111111111112" />
-        <entry key="..\:/Users/DreD/AndroidStudioProjects/modevtfinals/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/drawable/gradient_background.xml" value="0.2755208333333333" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_about.xml" value="0.20462962962962963" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_how_to_play.xml" value="0.20462962962962963" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_question1.xml" value="0.20462962962962963" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_question2.xml" value="0.264" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_question3.xml" value="0.264" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_question4.xml" value="0.264" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_game_question5.xml" value="0.4" />
+        <entry key="..\:/Development/MOBDEVT_FINALS/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
   </component>
