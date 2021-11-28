@@ -28,5 +28,10 @@ class MainViewModel: ViewModel() {
 
     }
 
+    fun correctAnswer(){
+        _data.value = _data.value?.plus(1)
+
+    }
+
 
 }
