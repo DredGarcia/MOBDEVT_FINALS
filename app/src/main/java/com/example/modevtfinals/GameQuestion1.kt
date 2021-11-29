@@ -10,9 +10,6 @@ import com.example.modevtfinals.databinding.ActivityGameQuestion1Binding
 import com.example.modevtfinals.viewModel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 
-import java.util.TimerTask;
-import java.util.Timer;
-
 class GameQuestion1 : AppCompatActivity() {
 
     var START_MILLI_SECONDS = 60000L
@@ -41,7 +38,7 @@ class GameQuestion1 : AppCompatActivity() {
 
         val viewModel by viewModels<MainViewModel>()
 
-        viewModel.data.observe(this)
+        viewModel.token.observe(this)
         {
             if(it == 0){
                 gameover()

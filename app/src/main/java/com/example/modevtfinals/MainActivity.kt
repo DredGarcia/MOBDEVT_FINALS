@@ -20,7 +20,6 @@ import com.example.modevtfinals.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
-
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,20 +38,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GameAbout::class.java)
             startActivity(intent)
         }
-
-
-
-    }
-
-    private fun timer() {
-        
-    }
-
-    private fun checkAnswer(){
-
-    }
-
-    private fun optionSelect(){
-
     }
 }

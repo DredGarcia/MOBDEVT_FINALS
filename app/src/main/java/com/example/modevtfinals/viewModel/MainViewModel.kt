@@ -8,28 +8,23 @@ import com.example.modevtfinals.LOG_TAG
 import com.example.modevtfinals.util.MainHelper
 
 class MainViewModel: ViewModel() {
-    private val _message = MutableLiveData<String>()
-    private val _data = MutableLiveData<Int>()
-    private val _load = MutableLiveData<Int>()
+    private val _token = MutableLiveData<Int>()
 
-    val message: LiveData<String> = _message
-    val data: LiveData<Int> = _data
-    val load: LiveData<Int> = _load
+    val token: LiveData<Int> = _token
 
     init {
         Log.i(LOG_TAG, "MainViewModel is CREATED")
-        _message.value = MainHelper.getMessage()
-        _data.value = MainHelper.getRemainingData()
-        _load.value = 3
+        _token.value = MainHelper.getRemainingData()
+
     }
 
     fun wrongAnswer(){
-        _data.value = _data.value?.minus(1)
+        _token.value = _token.value?.minus(1)
 
     }
 
     fun correctAnswer(){
-        _data.value = _data.value?.plus(1)
+        _token.value = _token.value?.plus(1)
 
     }
 

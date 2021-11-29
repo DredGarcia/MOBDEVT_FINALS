@@ -11,8 +11,5 @@ class GameHowToPlay : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_how_to_play)
 
-
-
-
     }
 }
