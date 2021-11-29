@@ -43,17 +43,16 @@ class GameQuestion1 : AppCompatActivity() {
 
         viewModel.data.observe(this)
         {
-            if(counter == 4){
+            if(it == 0){
+                gameover()
+            }
+            else if(counter == 4){
                 val Toast = Toast.makeText(applicationContext, "Congratulation you win",Toast.LENGTH_SHORT).show()
                 counter = 0
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
-            if(it == 0){
-                val Toast = Toast.makeText(applicationContext, "Sorry you lose",Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            }
+
             binding.textViewToken.text = "Token $it"
         }
 
@@ -74,11 +73,13 @@ class GameQuestion1 : AppCompatActivity() {
         }
 
         binding.buttonQ1B.setOnClickListener() {
-            if(counter == 2){
-                correct(viewModel)
-            }
-            else{
-                wrong(viewModel)
+            when (counter) {
+                2 -> {
+                    correct(viewModel)
+                }
+                else -> {
+                    wrong(viewModel)
+                }
             }
         }
 
@@ -94,12 +95,13 @@ class GameQuestion1 : AppCompatActivity() {
         }
 
         binding.buttonQ1D.setOnClickListener() {
-
-            if(counter == 1){
-                correct(viewModel)
-            }
-            else{
-                wrong(viewModel)
+            when (counter) {
+                1 -> {
+                    correct(viewModel)
+                }
+                else -> {
+                    wrong(viewModel)
+                }
             }
         }
     }
@@ -136,9 +138,7 @@ class GameQuestion1 : AppCompatActivity() {
     private fun startTimer(time_in_seconds: Long) {
         countdown_timer = object : CountDownTimer(time_in_seconds, 1000) {
             override fun onFinish() {
-                val Toast = Toast.makeText(applicationContext, "Sorry you lose",Toast.LENGTH_SHORT).show()
-                val intent = Intent(applicationContext, MainActivity::class.java)
-                startActivity(intent)
+                gameover()
 
             }
 
@@ -149,8 +149,12 @@ class GameQuestion1 : AppCompatActivity() {
         }
         countdown_timer.start()
         isRunning = true
+    }
 
-
+    private fun gameover() {
+        val Toast = Toast.makeText(applicationContext, "Sorry you lose", Toast.LENGTH_SHORT).show()
+        val intent = Intent(applicationContext, MainActivity::class.java)
+        startActivity(intent)
     }
 
     private fun updateTextUI() {
