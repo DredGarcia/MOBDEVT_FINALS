@@ -3,6 +3,7 @@ package com.example.modevtfinals
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.modevtfinals.databinding.ActivityGameQuestion1Binding
 import com.example.modevtfinals.viewModel.MainViewModel
@@ -15,10 +16,10 @@ class GameQuestion1 : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityGameQuestion1Binding
-    private val questions = arrayOf("1. What year did De La Salle - College of Saint Benilde was founded?", "2. Who is the current President of De La Salle College of Saint Benilde", "There are three main campuses in CSB, which is a 14 storey academic building and a big playground for creative minds that stimulates students innovative ideas and to think outside of the box.", "Which of the following is not a Benildean core value?", "Fill in the blank in our  with the correct word among the choices below:" +
+    private val questions = arrayOf("1. What year did De La Salle - College of Saint Benilde was founded?", "2. Who is the current President of De La Salle College of Saint Benilde", "There are three main campuses in CSB, which is a 14 storey academic building and a big playground for creative minds that stimulates students innovative ideas and to think outside of the box.", "Which of the following is not a Benildean core value?", "Fill in the blank in our  with the correct word among the choices below:\n" +
             "    \"De La Salle-College of Saint Benilde, a member of De La Salle Philippines, is a Catholic, dynamic, and innovative learning community. Guided by the Lasallian principles of _ _ _ _ _, Zeal in Service and Communion in Mission, it recognizes the uniqueness of every individual and responds to the diverse needs of all learners.\"")
     private val choice1 = arrayOf("A. 1975", "A. Br. Andrew Gonzalez", "A. Taft", "A. Perseverance and Forthright", "A. Faith")
-    private val choice2 = arrayOf("B. 1978", "B. Br. Armin Luistro", "B. SDA", "B. professional competence", "B. Duty")
+    private val choice2 = arrayOf("B. 1978", "B. Br. Armin Luistro", "B. SDA", "B. professional competence", "B. Duty", "")
     private val choice3 = arrayOf("C. 1980", "C. Br. Dennis Magbanua", "C. AKIC", "C. appreciation of individual worth", "C. Optimism")
     private val choice4 = arrayOf("D. 1982", "D. Bro. Edmundo Fernandez", "D. ATRIUM", "D. Sense of Nationhood", "D. Love")
     private var counter = 0;
@@ -27,8 +28,24 @@ class GameQuestion1 : AppCompatActivity() {
         binding = ActivityGameQuestion1Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val viewModel by viewModels<MainViewModel>()
+
         viewModel.data.observe(this)
         {
+            if(counter == 4){
+                val Toast = Toast.makeText(applicationContext, "Congratulation you win",Toast.LENGTH_SHORT).show()
+                counter = 0
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            if(it == 0){
+                val Toast = Toast.makeText(applicationContext, "Sorry you lose",Toast.LENGTH_SHORT).show()
+//                Snackbar.make(
+//                    binding.root, "Sorry you lose",
+//                    Snackbar.LENGTH_LONG
+//                ).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
             binding.textViewToken.text = "Token $it"
         }
 
@@ -49,15 +66,17 @@ class GameQuestion1 : AppCompatActivity() {
         }
 
         binding.buttonQ1B.setOnClickListener() {
-            wrong(viewModel)
+            if(counter == 2){
+                correct(viewModel)
+            }
+            else{
+                wrong(viewModel)
+            }
         }
 
         binding.buttonQ1C.setOnClickListener() {
             when (counter) {
                 0 -> {
-                    correct(viewModel)
-                }
-                2 -> {
                     correct(viewModel)
                 }
                 else -> {
@@ -88,6 +107,7 @@ class GameQuestion1 : AppCompatActivity() {
     }
 
     private fun correct(viewModel: MainViewModel) {
+
         viewModel.correctAnswer()
         Snackbar.make(
             binding.root, "Correct",
