@@ -19,6 +19,8 @@ import com.example.modevtfinals.databinding.ActivityMainBinding
 import com.example.modevtfinals.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
+
+
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,5 +46,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun timer() {
         
+    }
+
+    private fun checkAnswer(){
+
+    }
+
+    private fun optionSelect(){
+
     }
 }

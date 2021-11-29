@@ -3,6 +3,7 @@ package com.example.modevtfinals
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.modevtfinals.databinding.ActivityGameQuestion1Binding
@@ -13,6 +14,13 @@ import java.util.TimerTask;
 import java.util.Timer;
 
 class GameQuestion1 : AppCompatActivity() {
+
+    var START_MILLI_SECONDS = 60000L
+
+    lateinit var countdown_timer: CountDownTimer
+    var isRunning: Boolean = false;
+    var time_in_milli_seconds = 0L
+    private val tvtimer by lazy { binding.tvTimer }
 
 
     private lateinit var binding: ActivityGameQuestion1Binding
@@ -27,6 +35,10 @@ class GameQuestion1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGameQuestion1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        val time= 1L
+        time_in_milli_seconds = time.toLong() *60000L
+        startTimer(time_in_milli_seconds)
+
         val viewModel by viewModels<MainViewModel>()
 
         viewModel.data.observe(this)
@@ -123,5 +135,29 @@ class GameQuestion1 : AppCompatActivity() {
         binding.buttonQ1B.text = choice2[counter]
         binding.buttonQ1C.text = choice3[counter]
         binding.buttonQ1D.text = choice4[counter]
+    }
+
+    private fun startTimer(time_in_seconds: Long) {
+        countdown_timer = object : CountDownTimer(time_in_seconds, 1000) {
+            override fun onFinish() {
+
+            }
+
+            override fun onTick(p0: Long) {
+                time_in_milli_seconds = p0
+                updateTextUI()
+            }
+        }
+        countdown_timer.start()
+        isRunning = true
+
+
+    }
+
+    private fun updateTextUI() {
+        val minute = (time_in_milli_seconds / 1000) / 60
+        val seconds = (time_in_milli_seconds / 1000) % 60
+
+        tvtimer.text = "$minute:$seconds"
     }
 }

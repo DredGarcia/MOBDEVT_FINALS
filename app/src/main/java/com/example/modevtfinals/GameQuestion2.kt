@@ -39,4 +39,6 @@ class GameQuestion2 : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
 }
