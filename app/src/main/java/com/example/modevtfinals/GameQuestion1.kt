@@ -51,10 +51,6 @@ class GameQuestion1 : AppCompatActivity() {
             }
             if(it == 0){
                 val Toast = Toast.makeText(applicationContext, "Sorry you lose",Toast.LENGTH_SHORT).show()
-//                Snackbar.make(
-//                    binding.root, "Sorry you lose",
-//                    Snackbar.LENGTH_LONG
-//                ).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
@@ -140,6 +136,9 @@ class GameQuestion1 : AppCompatActivity() {
     private fun startTimer(time_in_seconds: Long) {
         countdown_timer = object : CountDownTimer(time_in_seconds, 1000) {
             override fun onFinish() {
+                val Toast = Toast.makeText(applicationContext, "Sorry you lose",Toast.LENGTH_SHORT).show()
+                val intent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(intent)
 
             }
 
